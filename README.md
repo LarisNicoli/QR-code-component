@@ -1,1 +1,1 @@
-# test
+# QR code component
