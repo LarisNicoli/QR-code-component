@@ -24,4 +24,18 @@ function generateQrCode() {
 
 qrCodeBtn.addEventListener("click", () => {
   generateQrCode();
+});
+
+qrInput.addEventListener("keydown", (e)=> {
+  if (e.code === "Enter") {
+  generateQrCode();
+  }
+})
+
+qrInput.addEventListener("keyup", () => {
+  if (!qrInput.value) {
+    container.classList.remove("active")
+    card.classList.remove("active")
+    qrCodeBtn.innerText = "Gerar Qr Code"
+  }
 })
